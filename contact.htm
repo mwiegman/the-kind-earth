@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="The Kind Earth comment form" />    
+    <meta name="author" content="Meredith Wiegman" />
+    <meta name="robots" content="index" />
+    <meta name="DCTERMS.rightsHolder" content="The Kind Earth" />
+    <title>Send us a Comment | The Kind Earth</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>    
+    <!-- SMOOTH SCROLL -->
+    <script>    
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+   </script> 
+   <script> 
+    // Change color of nav on scroll
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+            $(".nav").addClass("scrolling");
+        } else {
+            $(".nav").removeClass("scrolling");
+        }
+    });
+    </script> 
+    <script>   
+    $(document).ready(function(){
+     $('form').validate();
+     });
+    </script>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul>
+        <li class="skip"><a href="#main">Skip to Content</a></li>
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="products.htm">Our Products</a></li>
+        <li><a href="directory.htm">Company Directory</a></li>
+        <li><a href="links.htm">Partner Companies</a></li>
+        <li><a href="returns.htm">Returns</a></li>
+        <li><a href="contact.htm">Contact Us</a></li>        
+      </ul>
+    </nav>
+    <header class="contact-header">
+      <div class="right">
+        <h1>The Kind Earth</h1>
+        <h2>Comments</h2>      
+      </div>
+      <div class="down-button">
+        <a href="#main"><span class="entypo-down-open-big"></span></a>
+      </div>
+    </header>    
+     <div id="main" role="main" class="contact">
+       <h3>Have a comment? Drop us a line!</h3>
+        <form id="comment_form" method="post" action="form_script.php">
+          <h3 style="text-align:center">Your Comments</h3>
+          <input type="hidden" id="recipient" name="recipient" value="webdevteacher@gmail.com" />
+          <input type="hidden" id="redirect" name="redirect" value="confirmation.htm" />
+          <input type="hidden" id="subject" name="subject" value="The Kind Earth by Meredith Wiegman comment form" />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" class="required" /><br />
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Your e-mail address" class="required" /><br />
+          <label for="comment">Comments:</label><br />
+          <textarea id="comment" name="comment" cols="50" rows="5" placeholder="Add your comments here." class="required"></textarea><br />
+          Would you like to receive our newsletter?<br />
+          <input type="radio" id="yes_newsletter" name="newsletter" value="yes" checked /> Yes
+          <input type="radio" id="no_newsletter" name="newsletter" value="no" /> No<br />
+          Which of our items are you interested in?<br />
+          <input type="checkbox" id="dirt" name="dirt" value="interested"  /> Dirt
+          <input type="checkbox" id="sand" name="sand" value="interested" /> Sand
+          <input type="checkbox" id="stone" name="stone" value="interested"  /> Stone
+          <input type="checkbox" id="clay" name="clay" value="interested"  /> Clay<br />
+          What is your age?<br />
+          <label for="age">Age group:</label>
+          <select id="age" name="age" size="1" class="required">
+          <option value disabled selected> -- select an age group -- </option>    
+          <option value="under_18"> Under 18</option>
+          <option value="18-29"> 18 to 29</option>
+          <option value="30-49"> 30 to 49</option>
+          <option value="over_50"> Over 50</option>
+          </select><br />
+          <input class="button" type="submit" value="Submit My Comments" />
+        </form>
+        <div class="push"></div>
+     </div>    
+    <footer>
+      <p><a href="http://validator.w3.org/check/referer"><img src="http://www.netwebdev.net/webclass/images/valid-html5.png" alt="Valid HTML5!" height="15" width="80" /></a></p>
+      <p>This page last modified July 29, 2015</p>
+      <p>For more information, email <a href="mailto:NaturalProducts@TheKindEarth.com">NaturalProducts@TheKindEarth.com</a> or call us at <a href="tel:555-867-5309">555-867-5309</a>.</p>
+      <p class="copyright">Copyright &copy; 2015 The Kind Earth. All Rights Reserved.</p>
+    </footer>
+  </body>   
+</html>

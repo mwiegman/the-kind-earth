@@ -1,0 +1,348 @@
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;           
+}
+
+/*Default text font-family, color and size.
+Background image for all pages. Image source http://subtlepatterns.com/*/
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    color: #3D441E;
+    font-size: 1.5em;
+    line-height: 1.5;    
+    background: url("../images/subtle_white_feathers2.png");
+    background-color: #EEE1C3; 
+}
+
+/*Site tag line italicized, centering inherited from body*/
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;           
+    border-bottom:  2px solid;
+    margin-bottom: 5%;
+    padding-bottom:  5%;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    padding: 0;            
+}
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 2%;    
+}
+
+/*Page Layout and Styling*/
+
+main {    
+    width: 900px;
+    height: 100%;
+    max-width: 900px; 
+    min-height: 100%;
+    margin: 0 auto -200px;
+    padding-top: 5%;
+}
+
+.products,
+.directory,
+.contact {
+  padding-top: 5%;
+  margin: 0 auto -200px;
+  min-height: 100%
+}
+
+.contact {
+  max-width: 50%;
+}
+
+.nav {
+    text-align: center;
+    background-color: rgba(73, 93, 47, 0.5);
+    width: 100%;
+    position: fixed;     
+    top: 0;    
+}
+
+.nav.scrolling {
+  background-color: #495D2F;
+}
+
+footer {
+    text-align: center;
+    width: 100%;    
+    background-color: #495D2F;    
+    color: black;
+    font-size: 1rem;
+}
+
+footer p {
+    padding-top: 1%;
+}
+
+/* Header background images from https://unsplash.com */
+
+.home {
+  background: url("../images/mountain.jpg") no-repeat center center fixed;
+  background-size: cover;
+    height: 80%;
+    height: 80vh;
+}
+
+.products-header {
+  background: url("../images/rocky_hills.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+}
+
+.directory-header {
+  background: url("../images/landscape1.jpg") no-repeat center center fixed;  
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+}
+
+.links {
+  background: url("../images/beach.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+}
+
+.returns-header {
+  background: url("../images/tree.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+}
+
+.contact-header {
+  background: url("../images/rocks.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 80%;
+  height: 80vh;
+}
+
+.right {
+    float: right;
+    margin: 50px;
+    padding: 100px;
+}
+
+footer, .push {
+	height: 200px; 
+}
+
+img {
+    max-width: 100%;     
+    box-shadow: 2px 2px 10px;
+}
+
+dl {
+    text-align: left;
+    padding: 0 5%;
+} 
+
+dt {
+    font-weight: bold;
+    margin-top: 2.5%;
+}
+
+dd {
+    margin-top: 0;
+    margin-bottom: 2.5%;
+}
+
+dl:first-of-type {
+    margin-top: 5%;
+}
+
+/* down arrow styling*/
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.down-button {
+  text-align: center;  
+  font-size: 2.5em;
+  position: absolute;
+  bottom: 25%;    
+  left: 47%;  
+  width: 100px;          
+}
+
+.down-button:hover {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);   
+}
+
+/*Copyright section formatted with smaller text and text centered.*/
+
+.copyright {
+    color: black;
+    font-size: 0.8rem;
+    text-align: center; 
+    padding-top: 1%;    
+}
+
+/*Returns section in box with border*/
+
+.returns  {
+    border: 3px solid #202310;    
+    padding: 20px;
+}
+
+/*form styling*/
+
+form  {
+    border: 3px solid #202310;      
+    padding: 20px;
+    margin: 40px;
+    line-height: 3rem;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.error {
+  color: red;
+  margin: 10px;
+}
+
+input,
+textarea {
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+textarea {
+   width: 100%;
+}
+
+.button {
+  padding: 10px;
+  display: inline;
+  float: right;
+  font-weight: bold;
+}
+
+#comment_form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*multimedia styling*/
+
+.video {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+}
+
+.intro {
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+}
+
+/*List styling*/
+
+nav ul { 
+    list-style-type: none;      
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;        
+}
+
+.returns ul,
+.partners ul {
+    text-align: left;    
+    padding: 5%;        
+}
+
+.skip {
+ position: fixed;
+ top: 0;
+ left: 0;
+ font-size: 1rem;
+}
+
+/*Link styling (underline removed, color change on hover)*/
+
+a {
+    color: #CF6C0F;
+    text-decoration: none;
+}
+
+a:hover {   
+    text-decoration: underline;
+}
+
+nav a {
+    color: black;
+}
+
+header a {
+    color: #3D441B;   
+}
+
+nav a:hover,
+header a:hover,
+footer a:hover {
+  color: #EEE1C3;
+  text-decoration: none; 
+}
+
+/*Table Styles*/
+
+table, th, tr, td {
+    border: 2px solid #3D441B;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 20px;    
+    border-collapse: separate;    
+    border-spacing: 3px;
+}
+
+th {
+    background-color: #495D2F;
+    padding: 10px;
+    color: #EEE1C3;
+}
+
+td {
+    padding: 5px;
+}
